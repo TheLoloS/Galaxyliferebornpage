@@ -1,0 +1,180 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galaxy life</title>
+
+    <link rel="icon" href="https://cdn.discordapp.com/emojis/700370912486359141.png?v=1" sizes="any" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!--Style of all documents-->
+
+    <style>
+        body {
+            margin: 0;
+            background-color: rgb(48, 48, 48);
+        }
+
+        .header {
+            width: 100%;
+            height: 7vh;
+            background: #000;
+            position: fixed;
+            top: 0;
+            z-index: 10;
+            display: inline-flex
+        }
+
+        .button_movie {
+            width: 100%;
+            height: 100vh;
+
+        }
+
+        .button_play {
+            position: absolute;
+            background: linear-gradient(90deg, rgba(180, 61, 58, 1) 0%, rgba(217, 110, 0, 1) 50%, rgba(252, 176, 69, 1) 100%);
+            width: 30vw;
+            height: 10vh;
+            right: 35vw;
+            margin-top: 72vh;
+            border-radius: 30px 30px 30px 30px;
+            -moz-border-radius: 30px 30px 30px 30px;
+            -webkit-border-radius: 30px 30px 30px 30px;
+            border: 0px solid #000000;
+            transition: 0.5s;
+            color: white;
+            font-size: 7vh;
+            font-family: 'Cabin', sans-serif;
+        }
+
+        .button_play:hover {
+            background: linear-gradient(-90deg, rgba(180, 61, 58, 1) 0%, rgba(217, 110, 0, 1) 50%, rgba(252, 176, 69, 1) 100%);
+            -webkit-box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.75);
+            transition: 0.5s;
+
+
+
+        }
+
+        #myVideo {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            opacity: 0.1;
+        }
+
+        .header_button {
+            width: 12%;
+            height: 7vh;
+            color: white;
+            font-size: 2vh;
+            background: transparent;
+            position: relative;
+            top: 0;
+            border: 0;
+            padding-top: 1vh;
+            transition: 0.4s ease;
+            white-space: nowrap;
+        }
+
+        .header_button:hover {
+            border-bottom: 10px white solid;
+            background: linear-gradient(90deg, rgba(180, 61, 58, 1) 0%, rgba(217, 110, 0, 1) 50%, rgba(252, 176, 69, 1) 100%);
+            transition: 0.4s ease;
+        }
+
+        .header_button:focus {
+            transform: scale(1.1);
+            transition: 0.2s ease;
+        }
+
+        button:focus {
+            outline: none;
+        }
+
+        .button_play:focus {
+            transform: scale(1.1);
+            transition: 0.2s ease;
+        }
+
+        .menu_text {
+            margin: 0 auto;
+            margin-top: 30vh;
+            right: 22vw;
+            color: white;
+            font-size: 8vw;
+            /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
+            text-shadow: black 0em 0.3em 0.8em;
+            z-index: 11;
+            position: absolute;
+            text-align: center;
+            background: linear-gradient(90deg, rgba(180, 61, 58, 1) 0%, rgba(217, 110, 0, 1) 50%, rgba(252, 176, 69, 1) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: 2s;
+            font-family: 'Staatliches', cursive;
+        }
+
+        .menu_text:hover {
+            background: linear-gradient(90deg, rgba(180, 61, 58, 1) 0%, rgba(217, 110, 0, 1) 50%, rgba(252, 176, 69, 1) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: 2s;
+
+        }
+
+        /*@media only screen and (max-width: 768px) {
+            #myVideo {
+                
+            }*/
+    </style>
+
+    <!--end of Style-->
+
+    <div class="contener>">
+        <div class="header">
+            <img src="https://cdn.discordapp.com/emojis/700370912486359141.png?v=1" style="
+    width: 5vw;
+    height: 6vh;
+">
+            <button type="submit" class="header_button"> Galaxy
+                Life
+            </button>
+            <button type="submit" class="header_button">Mój Profil</button>
+            <button type="submit" class="header_button">Strona Reborn</button>
+            <button type="submit" class="header_button">Kontakt</button>
+        </div>
+        <video autoplay muted loop id="myVideo">
+            <source src="background.mp4" type="video/mp4">
+        </video>
+        <div class="button_movie">
+            <div class="menu_text">
+                <b><span>Galaxy Life Reborn<span></span> </b>
+            </div>
+
+            <button class="button_play" type="submit" value="Graj!"><span
+                    style="font-family: oriena">Graj</span></button>
+        </div>
+        <div class="content">
+
+        </div>
+        <div class="fotter"></div>
+
+        <script>
+            var vid = document.getElementById("myVideo");
+            vid.playbackRate = 0.3;
+        </script>
+</body>
+
+</html>
