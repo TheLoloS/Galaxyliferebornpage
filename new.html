@@ -32,6 +32,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@600&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.5.1.js"
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer>
+        new Crate({
+            server: '723475568129081376',
+            channel: '723475568670015580'
+        })
+    </script>
 </head>
 
 <body>
@@ -42,6 +48,7 @@
         body {
             margin: 0;
             background-color: rgb(48, 48, 48);
+            overflow: hidden;
         }
 
         .contener {
@@ -98,6 +105,8 @@
         #ghbimg {
             width: 5vw;
             height: 6vh;
+            max-width: 60px;
+            max-height: 60px;
         }
 
         #ghbimgh3 {
@@ -211,15 +220,31 @@
 
     <div class="contener">
         <div class="header">
-            <button id="galaxy_header_button" type="submit" class="header_button">
+            <button id="galaxy_header_button" type="button" class="header_button"
+                onclick=" myprofile_end(); searchprofile_end(); help_end(); regulations_end(); contact_end(); home_page_content();">
                 <!--firsty button in header-->
                 <img id="ghbimg" src="https://cdn.discordapp.com/emojis/700370912486359141.png?v=1">
-                <h3 id="ghbimgh3">GalaxyLife</h3>
+                <h3 id="ghbimgh3"> Galaxy Life</h3>
             </button>
-            <button type="submit" class="header_button">Mój Profil</button>
-            <button type="submit" class="header_button">Strona Reborn</button>
-            <button type="submit" class="header_button">Galaxy Discord</button>
-            <button type="submit" class="header_button">Kontakt</button>
+            <button type="button" class="header_button"
+                onclick="home_page_content_end();  searchprofile_end(); help_end(); regulations_end(); contact_end(); myprofile();">Mój
+                Profil</button>
+            <button type="button" class="header_button"
+                onclick="home_page_content_end(); myprofile_end();  help_end(); regulations_end(); contact_end(); searchprofile();">Szukaj
+                Profilu</button>
+            <button type="button" class="header_button" onclick="location.href='https://discord.gg/mfVW2D';">Galaxy
+                Discord</button>
+            <button type="button" class="header_button" onclick="location.href='https://galaxylifereborn.com/project';"
+                style="
+                white-space: inherit;
+            ">Strona
+                Autorów GLR</button>
+            <button type="button" class="header_button"
+                onclick="home_page_content_end(); myprofile_end(); searchprofile_end();  regulations_end(); contact_end(); help();">Pomoc</button>
+            <button type="button" class="header_button"
+                onclick="home_page_content_end(); myprofile_end(); searchprofile_end(); help_end();  contact_end(); regulations();">Regulamin</button>
+            <button type="button" class="header_button"
+                onclick="home_page_content_end(); myprofile_end(); searchprofile_end(); help_end(); regulations_end(); contact();">Kontakt</button>
         </div>
         <video autoplay muted loop id="myVideo">
             <!--Video background-->
@@ -236,6 +261,98 @@
         </div>
         <div class="fotter">
             <h4 id="fotterh4">Witam, Strone utworzył Piotr TheLoloS Sałaga 2020 😎😍</h4>
+        </div>
+
+        <!--Styles for other Buttons-->
+        <style>
+            .myprofile {
+                width: 80vw;
+                height: 80vh;
+                margin: auto;
+                margin-top: 12vh;
+                margin-bottom: 12vh;
+                background-color: #000;
+                display: none;
+                border-radius: 10px 10px 10px 10px;
+                -moz-border-radius: 10px 10px 10px 10px;
+                -webkit-border-radius: 10px 10px 10px 10px;
+                border: 0px solid #000000;
+            }
+
+            .searchprofile {
+                width: 80vw;
+                height: 80vh;
+                margin: auto;
+                margin-top: 12vh;
+                margin-bottom: 12vh;
+                background-color: #000;
+                display: none;
+                border-radius: 10px 10px 10px 10px;
+                -moz-border-radius: 10px 10px 10px 10px;
+                -webkit-border-radius: 10px 10px 10px 10px;
+                border: 0px solid #000000;
+            }
+
+            .help {
+                width: 80vw;
+                height: 80vh;
+                margin: auto;
+                margin-top: 12vh;
+                margin-bottom: 12vh;
+                background-color: #000;
+                display: none;
+                border-radius: 10px 10px 10px 10px;
+                -moz-border-radius: 10px 10px 10px 10px;
+                -webkit-border-radius: 10px 10px 10px 10px;
+                border: 0px solid #000000;
+            }
+
+            .regulations {
+                width: 80vw;
+                height: 80vh;
+                margin: auto;
+                margin-top: 12vh;
+                margin-bottom: 12vh;
+                background-color: #000;
+                display: none;
+                border-radius: 10px 10px 10px 10px;
+                -moz-border-radius: 10px 10px 10px 10px;
+                -webkit-border-radius: 10px 10px 10px 10px;
+                border: 0px solid #000000;
+            }
+
+            .contact {
+                width: 80vw;
+                height: 80vh;
+                margin: auto;
+                margin-top: 12vh;
+                margin-bottom: 12vh;
+                background-color: #000;
+                display: none;
+                border-radius: 10px 10px 10px 10px;
+                -moz-border-radius: 10px 10px 10px 10px;
+                -webkit-border-radius: 10px 10px 10px 10px;
+                border: 0px solid #000000;
+            }
+        </style>
+        <!--End of styles-->
+
+        <iframe id="ifr" src="https://galaxylifereborn.com/profile/TheLoloS" width="100%" height="100%"
+            style="display: none;">
+
+        </iframe>
+
+        <div class="searchprofile">
+
+        </div>
+        <div class="help">
+
+        </div>
+        <div class="regulations">
+
+        </div>
+        <div class="contact">
+
         </div>
     </div>
 
@@ -292,14 +409,80 @@
 
 
 
+        function home_page_content() {
+
+            $(".button_movie").fadeIn();
+            $(".content").fadeIn();
+            var vid = document.getElementById("myVideo");
+            vid.play();
+        }
+
+        function home_page_content_end() {
+            $(".button_movie").fadeOut();
+            $(".content").fadeOut();
+        }
+
         function game() {
-            $(".contener").fadeOut(500);
-            $(".game").fadeIn(500);
+            $(".contener").fadeOut();
+            $(".game").fadeIn();
         }
         function return_game() {
-            $(".game").fadeOut(500);
-            $(".contener").fadeIn(500);
+            $(".game").fadeOut();
+            $(".contener").fadeIn();
         }
+
+        function myprofile() {
+            $("#ifr").fadeIn();
+            var vid = document.getElementById("myVideo");
+            vid.pause();
+            document.getElementById("myVideo").style.display = "none";
+            var ifr = document.getElementById("ifr");
+            ifr.setAttribute("style", "display: ;")
+            var zmienna = document.getElementById("aswift_0");
+            zmienna.setAttribute("style", "display: none;")
+            var ifr2 = document.getElementsByClassName("navigation-wrap");
+            ifr.setAttribute("style", "display: none;");
+
+
+        }
+        function myprofile_end() {
+            $("#ifr").fadeOut();
+
+        }
+        function searchprofile() {
+            $(".searchprofile").fadeIn();
+
+        }
+        function searchprofile_end() {
+            $(".searchprofile").fadeOut();
+
+        }
+
+        function help() {
+            $(".help").fadeIn();
+
+        }
+        function help_end() {
+            $(".help").fadeOut();
+
+        }
+        function regulations() {
+            $(".regulations").fadeIn();
+
+        }
+        function regulations_end() {
+            $(".regulations").fadeOut();
+
+        }
+        function contact() {
+            $(".contact").fadeIn();
+
+        }
+        function contact_end() {
+            $(".contact").fadeOut();
+
+        }
+
     </script>
 
 
