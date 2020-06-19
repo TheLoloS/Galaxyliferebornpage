@@ -1,10 +1,31 @@
+<!--
+//...............................................................................................................................
+//.TTTTTTTTTTThhhh.................eLLL..................llll.............SSSSSSS............GGGGGGG....LLLL.......RRRRRRRRRR....
+//.TTTTTTTTTTThhhh.................eLLL..................llll............SSSSSSSSS.........GGGGGGGGGG...LLLL.......RRRRRRRRRRR...
+//.TTTTTTTTTTThhhh.................eLLL..................llll............SSSSSSSSSS.......GGGGGGGGGGGG..LLLL.......RRRRRRRRRRR...
+//....TTTT....hhhhhhhh....eeeeee...eLLL.........oooooo...llll...oooooo..oSSSS..SSSS.......GGGGG..GGGGG..LLLL.......RRRR...RRRRR..
+//....TTTT....hhhhhhhhh..eeeeeeee..eLLL.......ooooooooo..llll.ooooooooo.oSSSS............ GGGG....GGG...LLLL.......RRRR...RRRRR..
+//....TTTT....hhhh.hhhhhheee.eeee..eLLL.......oooo.ooooo.llll.oooo.ooooo.SSSSSSS......... GGG...........LLLL.......RRRRRRRRRRR...
+//....TTTT....hhhh..hhhhheee..eeee.eLLL......Looo...oooo.lllllooo...oooo..SSSSSSSSS...... GGG..GGGGGGGG.LLLL.......RRRRRRRRRRR...
+//....TTTT....hhhh..hhhhheeeeeeeee.eLLL......Looo...oooo.lllllooo...oooo....SSSSSSS...... GGG..GGGGGGGG.LLLL.......RRRRRRRR......
+//....TTTT....hhhh..hhhhheeeeeeeee.eLLL......Looo...oooo.lllllooo...oooo.......SSSSS..... GGGG.GGGGGGGG.LLLL.......RRRR.RRRR.....
+//....TTTT....hhhh..hhhhheee.......eLLL......Looo...oooo.lllllooo...oooooSSS....SSSS......GGGGG....GGGG.LLLL.......RRRR..RRRR....
+//....TTTT....hhhh..hhhhheee..eeee.eLLLLLLLLL.oooo.ooooo.llll.oooo.ooooooSSSSSSSSSSS......GGGGGGGGGGGG..LLLLLLLLLL.RRRR..RRRRR...
+//....TTTT....hhhh..hhhh.eeeeeeee..eLLLLLLLLL.ooooooooo..llll.ooooooooo..SSSSSSSSSS........GGGGGGGGGG...LLLLLLLLLL.RRRR...RRRRR..
+//....TTTT....hhhh..hhhh..eeeeee...eLLLLLLLLL...oooooo...llll...oooooo....SSSSSSSS...........GGGGGGG....LLLLLLLLLL.RRRR....RRRR..
+//...............................................................................................................................
+-->
+
 <!DOCTYPE html lang="pl">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galaxy life</title>
-
+    <meta name="description"
+        content="Strona Usprawniająca Gre w Galaxy Life Reborn. Dodaje czat i wiele innych wspaniałych dodatków do gry!">
+    <meta name="keywords" content="Galaxy, life, reborn, galaxy life,galaxy life reborn,">
+    <meta name="author" content="Piotr TheLoloS Sałaga">
     <link rel="icon" href="https://cdn.discordapp.com/emojis/700370912486359141.png?v=1" sizes="any" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@100&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
@@ -38,6 +59,51 @@
             display: inline-flex;
         }
 
+        .header_button {
+            width: 12%;
+            height: 7vh;
+            color: white;
+            font-size: 2vh;
+            background: transparent;
+            position: relative;
+            top: 0;
+            border: 0;
+            padding-top: 1vh;
+            transition: 0.4s ease;
+            white-space: nowrap;
+        }
+
+        .header_button:hover {
+            border-bottom: 10px white solid;
+            background: linear-gradient(90deg, rgba(180, 61, 58, 1) 0%, rgba(217, 110, 0, 1) 50%, rgba(252, 176, 69, 1) 100%);
+            transition: 0.4s ease;
+        }
+
+        .header_button:focus {
+            transform: scale(1.1);
+            transition: 0.2s ease;
+        }
+
+        #galaxy_header_button {
+            display: inline-flex;
+            vertical-align: middle;
+            padding-top: 0.2vh;
+            width: 17vw;
+            transform: scale(1.2);
+            padding-left: 2vw;
+            padding-right: 1vw;
+            margin-left: 0vw;
+        }
+
+        #ghbimg {
+            width: 5vw;
+            height: 6vh;
+        }
+
+        #ghbimgh3 {
+            padding-left: 1vh;
+        }
+
         .button_movie {
             width: 100%;
             height: 100vh;
@@ -67,9 +133,11 @@
             -moz-box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.75);
             box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.75);
             transition: 0.5s;
+        }
 
-
-
+        .button_play:focus {
+            transform: scale(1.1);
+            transition: 0.2s ease;
         }
 
         #myVideo {
@@ -81,38 +149,8 @@
             opacity: 0.1;
         }
 
-        .header_button {
-            width: 12%;
-            height: 7vh;
-            color: white;
-            font-size: 2vh;
-            background: transparent;
-            position: relative;
-            top: 0;
-            border: 0;
-            padding-top: 1vh;
-            transition: 0.4s ease;
-            white-space: nowrap;
-        }
-
-        .header_button:hover {
-            border-bottom: 10px white solid;
-            background: linear-gradient(90deg, rgba(180, 61, 58, 1) 0%, rgba(217, 110, 0, 1) 50%, rgba(252, 176, 69, 1) 100%);
-            transition: 0.4s ease;
-        }
-
-        .header_button:focus {
-            transform: scale(1.1);
-            transition: 0.2s ease;
-        }
-
         button:focus {
             outline: none;
-        }
-
-        .button_play:focus {
-            transform: scale(1.1);
-            transition: 0.2s ease;
         }
 
         .menu_text {
@@ -121,9 +159,7 @@
             right: 22vw;
             color: white;
             font-size: 8vw;
-            /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
             text-shadow: black 0em 0.3em 0.8em;
-
             position: absolute;
             text-align: center;
             background: linear-gradient(90deg, rgba(180, 61, 58, 1) 0%, rgba(217, 110, 0, 1) 50%, rgba(252, 176, 69, 1) 100%);
@@ -157,7 +193,12 @@
             height: 5vh;
             font-size: 140%;
             transition: 0.5s ease;
+        }
 
+        #fotterh4 {
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 0.1vh;
         }
 
         /*@media only screen and (max-width: 768px) {
@@ -170,23 +211,10 @@
 
     <div class="contener">
         <div class="header">
-
-            <button type="submit" class="header_button" style="
-display: inline-flex;
-    vertical-align: middle;
-    padding-top: 0.2vh;
-    width: 17vw;
-    transform: scale(1.2);
-    padding-left: 2vw;
-    padding-right: 1vw;
-    margin-left: 0vw;
-            "> <img src="https://cdn.discordapp.com/emojis/700370912486359141.png?v=1" style="
-                width: 5vw;
-                height: 6vh;
-            ">
-                <h3 style="
-                padding-left: 1vh;">Galaxy
-                    Life</h3>
+            <button id="galaxy_header_button" type="submit" class="header_button">
+                <!--firsty button in header-->
+                <img id="ghbimg" src="https://cdn.discordapp.com/emojis/700370912486359141.png?v=1">
+                <h3 id="ghbimgh3">GalaxyLife</h3>
             </button>
             <button type="submit" class="header_button">Mój Profil</button>
             <button type="submit" class="header_button">Strona Reborn</button>
@@ -194,24 +222,20 @@ display: inline-flex;
             <button type="submit" class="header_button">Kontakt</button>
         </div>
         <video autoplay muted loop id="myVideo">
+            <!--Video background-->
             <source src="background.mp4" type="video/mp4">
         </video>
         <div class="button_movie">
             <div class="menu_text">
                 <b><span>Galaxy Life Reborn<span></span> </b>
             </div>
-
             <button class="button_play" type="button" value="Graj!" onclick="game()"><span
                     style="font-family: oriena">Graj</span></button>
         </div>
         <div class="content">
-
         </div>
         <div class="fotter">
-            <h4 style="
-           margin-left: auto;
-            margin-right: auto;
-            margin-top: 0.1vh;">Witam, Strone utworzył Piotr TheLoloS Sałaga 2020 😎😍</h4>
+            <h4 id="fotterh4">Witam, Strone utworzył Piotr TheLoloS Sałaga 2020 😎😍</h4>
         </div>
     </div>
 
@@ -260,6 +284,9 @@ display: inline-flex;
             src="https://galaxylifereborn.com/">
         </iframe>
     </div>
+
+    <!--Part of Scripts-->
+
     <script>
         $(document).ready(function () { var vid = document.getElementById("myVideo"); vid.playbackRate = 0.4; });
 
