@@ -341,10 +341,35 @@
             style="display: none;">
 
         </iframe>
+        <style>
+            #numb:focus {
+                transform: scale(1.1);
+                transition: 0.5s;
 
-        <div class="searchprofile">
+            }
+        </style>
 
+        <div class="searchprofile" id="searchprofile" style="display: none;">
+            <input id="numb" class="button_play" onclick="document.getElementById('numb').setAttribute('value', '')"
+                style="background: white;margin-top: 25vh;width: 50vw;right: 25vw;color: black;"
+                value="Wyszukaj Gracza">
+            <button id="btn_name" class="button_play" type="button" onclick="myFunction()"
+                style="margin-top: 60vh;">Szukaj</button>
         </div>
+        <script>
+            function myFunction() {
+                var x, text;
+
+                x = document.getElementById("numb").value;
+                document.getElementById("searchprofile_nick").setAttribute("src", "https://galaxylifereborn.com/profile/" + x);
+                document.getElementById("searchprofile_nick").setAttribute("style", "display: ;border: 0;");
+                document.getElementById("searchprofile").setAttribute("style", "display: none;");
+                var reklama = document.getElementById("aswift_0_expand");
+                reklama.setAttribute("style", "display: none;")
+            }
+        </script>
+        <iframe id="searchprofile_nick" src="" width="100%" height="100%" style="display: none; "></iframe>
+
         <div class="help">
 
         </div>
@@ -364,6 +389,7 @@
             width: 100%;
             height: 100%;
             overflow: hidden;
+            border: 0;
         }
 
         .powrot {
@@ -371,7 +397,7 @@
             background: linear-gradient(90deg, rgba(180, 61, 58, 1) 0%, rgba(217, 110, 0, 1) 50%, rgba(252, 176, 69, 1) 100%);
             width: 10vw;
             height: 4vh;
-            left: 1vw;
+            left: 0.5vw;
             top: 1vh;
             border-radius: 30px 30px 30px 30px;
             -moz-border-radius: 30px 30px 30px 30px;
@@ -440,8 +466,6 @@
             ifr.setAttribute("style", "display: ;")
             var zmienna = document.getElementById("aswift_0");
             zmienna.setAttribute("style", "display: none;")
-            var ifr2 = document.getElementsByClassName("navigation-wrap");
-            ifr.setAttribute("style", "display: none;");
 
 
         }
@@ -451,6 +475,9 @@
         }
         function searchprofile() {
             $(".searchprofile").fadeIn();
+            var vid = document.getElementById("myVideo");
+            vid.pause();
+            document.getElementById("myVideo").style.display = "none";
 
         }
         function searchprofile_end() {
