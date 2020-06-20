@@ -337,7 +337,7 @@
         </style>
         <!--End of styles-->
 
-        <iframe id="ifr" src="https://galaxylifereborn.com/profile/TheLoloS" width="100%" height="100%"
+        <iframe class="ifr" id="ifr" src="https://galaxylifereborn.com/profile/TheLoloS" width="100%" height="100%"
             style="display: none;">
 
         </iframe>
@@ -463,10 +463,13 @@
             var vid = document.getElementById("myVideo");
             vid.pause();
             document.getElementById("myVideo").style.display = "none";
-            var ifr = document.getElementById("ifr");
-            ifr.setAttribute("style", "display: ;")
-            var zmienna = document.getElementById("aswift_0");
-            zmienna.setAttribute("style", "display: none;")
+            const iframe1 = document.querySelectorAll("#ifr");
+            var head = iframe1.document.querySelector(".navigation-wrap.bg-light.scroll-on.start-style");
+            i.setAttribute("style", "display: none");
+            var box1 = iframe1.document.querySelector(".box");
+            var box = iframe1.document.querySelectorAll(".box");
+            box[2].setAttribute("style", "display: none;");
+
 
 
         }
