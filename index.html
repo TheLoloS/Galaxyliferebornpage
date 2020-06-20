@@ -463,13 +463,18 @@
             var vid = document.getElementById("myVideo");
             vid.pause();
             document.getElementById("myVideo").style.display = "none";
-            const iframe1 = document.querySelectorAll("#ifr");
+            var iframe5 = document.querySelectorAll(".ifr");
+            [].forEach.call(iframe5,
+                function fn(elem) {
+                    consol.log(elem.contentWindow.document.body.querySelectorAll('body'));
+                });
+            /*
             var head = iframe1.document.querySelector(".navigation-wrap.bg-light.scroll-on.start-style");
             i.setAttribute("style", "display: none");
             var box1 = iframe1.document.querySelector(".box");
             var box = iframe1.document.querySelectorAll(".box");
             box[2].setAttribute("style", "display: none;");
-
+*/
 
 
         }
