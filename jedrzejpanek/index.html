@@ -10,6 +10,8 @@
         Profesjonalny realizator Jedrzej Panek Pomoże ci odnaleść to czego szukasz.">
     <link rel="icon" href="logo23.png" sizes="any" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital@1&display=swap" rel="stylesheet">
+    <link href="all.css" rel="stylesheet">
+    <script defer src="all.js"></script>
 </head>
 
 <body>
@@ -113,6 +115,7 @@
             position: absolute;
             background-color: rgba(150, 143, 143, 0.5);
             transition: 1s;
+
 
         }
 
@@ -255,8 +258,6 @@
             box-shadow: 0px 0px 25px 0px rgba(255, 255, 255, 1);
         }
 
-
-
         .mojatworczosc>p {
             width: 100%;
             color: white;
@@ -264,6 +265,51 @@
             font-size: 22px;
             line-height: 30px;
             font-family: 'Jost', sans-serif;
+
+        }
+
+        .spolecznosci {
+            left: 10%;
+            right: 10%;
+            width: 80%;
+            height: 90%;
+            top: 5%;
+            position: absolute;
+            background-color: rgba(150, 143, 143, 0.5);
+            transition: 1s;
+            display: none;
+
+        }
+
+        .spolecznosci>h1 {
+            width: 100%;
+            text-align: center;
+            color: white;
+            font-size: 64px;
+            transition: 0.3s;
+        }
+
+        .spolecznosci>h1:hover {
+            transform: scale(1.1);
+            transition: 0.3s ease;
+        }
+
+        .spolecznosci>a>img {
+            width: 20%;
+            height: 27%;
+            display: inline-block;
+            margin-left: 2%;
+            margin-right: 2%;
+            margin-top: 0%;
+            transition: 0.3s;
+            color: orange;
+            text-align: center;
+            transform: scale(0.8);
+        }
+
+        .spolecznosci>a>img:hover {
+            transform: scale(1.1);
+            transition: 0.2s;
 
         }
     </style>
@@ -349,6 +395,29 @@
             <p>Wszystkie materiały są pełno prawną własnościa Jędrzeja Panka. Licencja: <a
                     href="https://distrokid.com/">Distrokid.com</a></p>
         </div>
+        <div class="spolecznosci" id="spolecznosci">
+            <h1>Możesz mnie śledzić tutaj: </h1>
+            <hr>
+            <a href=""><img src="https://cdn3.iconfinder.com/data/icons/flat-icons-web/40/Soundcloud-512.png" /></a>
+            <a href=""><img src="https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Youtube-512.png" alt=""></a>
+            <a href=""><img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/1200px-Spotify_logo_without_text.svg.png"
+                    alt=""></a>
+            <a href=""><img
+                    src="https://lh3.googleusercontent.com/Ur6MYUoYNhzMhyIOq_uWT_3rLRkCPIc46Rd0o8TjaPHq840YdQOaoI7zfH7bGT9w5DpN"
+                    alt=""></a>
+            <a href=""><img src="https://i.pinimg.com/originals/2b/2a/4e/2b2a4e79ffe23cdf4f460f9dcbd3028c.png"
+                    alt=""></a>
+            <a href=""><img src="tidal.png" alt=""></a>
+            <a href=""><img src="https://images-na.ssl-images-amazon.com/images/I/61TJ5QAsPjL.png" alt=""></a>
+            <a href=""><img
+                    src="https://lh3.googleusercontent.com/proxy/7Ltw3cXffTSF-edobHGGp0pwnkftxLbKOtWgkmc6DXYgulKKMBPipvM9H7wCBnaWXTttYxUVYHP5PAuBWEV7TPE8fF2qfk6MPAK1vHeysMsgucLTAp-R1iLixpUdkpv9ZmlnulMWuGXI6V-DUpo"
+                    alt=""></a>
+            <a href=""><img src="https://cdn3.iconfinder.com/data/icons/logos-and-brands-adobe/512/224_Napster-512.png"
+                    alt=""></a>
+            <a href=""><img src="https://img.icons8.com/color/1000/000000/google-play-music.png" /></a>
+
+        </div>
         <div class="fotter">
             <p>Autor: Piotr TheLoloS Sałaga 2020. Wykonał dla Jędrzej Panek. Wszystkie prawa zastrzerzone &copy</p>
         </div>
@@ -379,6 +448,9 @@
         });
 
         przyciski[2].addEventListener("click", function przycisk3() {
+            document.getElementById("spolecznosci").setAttribute("style", "Display: block;");
+            document.getElementById("first_contant").setAttribute("style", "Display: none;");
+            document.getElementById("mojatworczosc").setAttribute("style", "Display: none;");
             if (button_toggle.getAttribute("id") == "table_1") {
                 document.getElementById("menu").setAttribute("id", "menu_toggled");
                 document.getElementById("transp").setAttribute("class", "transp_toggled");
@@ -398,9 +470,12 @@
             }
         });
 
+
+
         przyciski[1].addEventListener("click", function przycisk2() {
             document.getElementById("mojatworczosc").setAttribute("style", "Display: inline-block;");
             document.getElementById("first_contant").setAttribute("style", "Display: none;");
+            document.getElementById("spolecznosci").setAttribute("style", "Display: none;");
             if (button_toggle.getAttribute("id") == "table_1") {
                 document.getElementById("menu").setAttribute("id", "menu_toggled");
                 document.getElementById("transp").setAttribute("class", "transp_toggled");
@@ -423,6 +498,7 @@
 
         przyciski[0].addEventListener("click", function przycisk1() {
             document.getElementById("mojatworczosc").setAttribute("style", "Display: none;");
+            document.getElementById("spolecznosci").setAttribute("style", "Display: none;");
             document.getElementById("first_contant").setAttribute("style", "Display: ;");
             if (button_toggle.getAttribute("id") == "table_1") {
                 document.getElementById("menu").setAttribute("id", "menu_toggled");
