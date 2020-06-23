@@ -112,6 +112,7 @@
             top: 15%;
             position: absolute;
             background-color: rgba(150, 143, 143, 0.5);
+            transition: 1s;
 
         }
 
@@ -207,6 +208,64 @@
         .button_menu:focus {
             outline: 0;
         }
+
+        .mojatworczosc {
+            left: 10%;
+            right: 10%;
+            width: 80%;
+            height: 85%;
+            top: 7.5%;
+            position: absolute;
+            background-color: rgba(150, 143, 143, 0.5);
+            display: none;
+            transition: 1s;
+        }
+
+        .twr_movie {
+            width: calc(25% - 2px);
+            height: calc(25% - 2px);
+            background-color: black;
+            display: inline-block;
+            margin-left: calc(4% - 2px);
+            margin-right: calc(4% - 2px);
+            margin-top: 4%;
+            transition: 0.3s;
+            border: white 2px solid;
+
+        }
+
+        .mojatworczosc>h1 {
+            width: 100%;
+            text-align: center;
+            color: white;
+            font-size: 64px;
+            transition: 0.3s;
+        }
+
+        .mojatworczosc>h1:hover {
+            font-size: 65px;
+            transition: 0.3s ease;
+        }
+
+        .twr_movie:hover {
+            transform: scale(1.2);
+            transition: 0.3s;
+            -webkit-box-shadow: 0px 0px 25px 0px rgba(255, 255, 255, 1);
+            -moz-box-shadow: 0px 0px 25px 0px rgba(255, 255, 255, 1);
+            box-shadow: 0px 0px 25px 0px rgba(255, 255, 255, 1);
+        }
+
+
+
+        .mojatworczosc>p {
+            width: 100%;
+            color: white;
+            text-align: center;
+            font-size: 22px;
+            line-height: 30px;
+            font-family: 'Jost', sans-serif;
+
+        }
     </style>
     <div class="backgroung">
         <div class="transp" id="transp">
@@ -243,7 +302,7 @@
             <div class="button_menu_table" id="table_2"></div>
             <div class="button_menu_table" id="table_3"></div>
         </div>
-        <div class="first_contant">
+        <div class="first_contant" id="first_contant">
             <h1>Realizacja & Studio</h1>
             <hr style="font-size: 4px;">
             <p>Witam Nazywam się Jędrzej Panek i od dziecka zajmuje sie muzyką.
@@ -258,6 +317,37 @@
                 technicznym
                 słownictwie sie nie znam)
             </p>
+        </div>
+        <div class="mojatworczosc" id="mojatworczosc">
+            <h1>Wybiorcze Kompozycje</h1>
+            <hr>
+            <div class="twr_movie"><iframe width="100%" height="100%"
+                    src="https://www.youtube-nocookie.com/embed/mJXJsSJe2MQ?controls=0" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe></div>
+            <div class="twr_movie"><iframe width="100%" height="100%"
+                    src="https://www.youtube-nocookie.com/embed/FsJvM7tyrxg?controls=0" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe></div>
+            <div class="twr_movie"><iframe width="100%" height="100%"
+                    src="https://www.youtube-nocookie.com/embed/IzZSuEXzyqc?controls=0" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe></div>
+            <div class="twr_movie"><iframe width="100%" height="100%"
+                    src="https://www.youtube-nocookie.com/embed/n3zebxoNHgk?controls=0" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe></div>
+            <div class="twr_movie"><iframe width="100%" height="100%"
+                    src="https://www.youtube-nocookie.com/embed/dM0w1e7XEdE?controls=0" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe></div>
+            <div class="twr_movie"><iframe width="100%" height="100%"
+                    src="https://www.youtube-nocookie.com/embed/1o_TQG1pEtY?controls=0" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe></div>
+            <br><br>
+            <p>Wszystkie materiały są pełno prawną własnościa Jędrzeja Panka. Licencja: <a
+                    href="https://distrokid.com/">Distrokid.com</a></p>
         </div>
         <div class="fotter">
             <p>Autor: Piotr TheLoloS Sałaga 2020. Wykonał dla Jędrzej Panek. Wszystkie prawa zastrzerzone &copy</p>
@@ -287,6 +377,7 @@
                 document.getElementById("table_3_toggled").setAttribute("id", "table_3");
             }
         });
+
         przyciski[2].addEventListener("click", function przycisk3() {
             if (button_toggle.getAttribute("id") == "table_1") {
                 document.getElementById("menu").setAttribute("id", "menu_toggled");
@@ -306,10 +397,14 @@
                 document.getElementById("table_3_toggled").setAttribute("id", "table_3");
             }
         });
+
         przyciski[1].addEventListener("click", function przycisk2() {
+            document.getElementById("mojatworczosc").setAttribute("style", "Display: inline-block;");
+            document.getElementById("first_contant").setAttribute("style", "Display: none;");
             if (button_toggle.getAttribute("id") == "table_1") {
                 document.getElementById("menu").setAttribute("id", "menu_toggled");
                 document.getElementById("transp").setAttribute("class", "transp_toggled");
+
 
             } else {
                 document.getElementById("menu_toggled").setAttribute("id", "menu");
@@ -327,6 +422,8 @@
         });
 
         przyciski[0].addEventListener("click", function przycisk1() {
+            document.getElementById("mojatworczosc").setAttribute("style", "Display: none;");
+            document.getElementById("first_contant").setAttribute("style", "Display: ;");
             if (button_toggle.getAttribute("id") == "table_1") {
                 document.getElementById("menu").setAttribute("id", "menu_toggled");
                 document.getElementById("transp").setAttribute("class", "transp_toggled");
