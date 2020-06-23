@@ -1,0 +1,121 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .all {
+            width: 100%;
+            height: 100%;
+        }
+
+        .all>img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+
+        .header {
+            width: 100%;
+            height: 5vh;
+            background-color: rgb(90, 90, 90);
+            position: absolute;
+            top: 0;
+
+        }
+
+        .fotter {
+            width: 100%;
+            height: 5vh;
+            background-color: rgb(90, 90, 90);
+            position: absolute;
+            bottom: 0;
+        }
+
+        .container {
+            width: 75%;
+            height: 75%;
+            background-color: rgb(90, 90, 90);
+            position: absolute;
+            margin: 12.5%;
+            z-index: 10;
+            opacity: 0.8;
+            color: black;
+            text-align: center;
+        }
+
+        .container>h2 {
+            font-size: 48px;
+
+        }
+
+        .container>p {
+            font-size: 19px;
+        }
+
+        .btn {
+            position: ;
+            border: 0;
+            background-color: aqua;
+            transform: scale(1.5);
+            bottom: 15%;
+        }
+
+        #next {
+            transform: translate(-20px, 0px);
+        }
+
+        #back {
+            transform: translate(20px, 0px);
+        }
+    </style>
+    <div class="all">
+        <img src="https://kobieceinspiracje.pl/media/thumbnail/bc/b4/bcb44015dc5dfc2ea2bca6d3bc106129.jpg" alt="">
+        <div class="header">
+
+        </div>
+        <div class="container">
+
+            <h2>7 sposobów na spuchnięte stopy</h2>
+
+            <p id="1" class="1" style="display: ;transition: 1s;">1</p>
+            <p id="2" class="1" style="display: none;transition: 1s;">2</p>
+            <p id="3" class="1" style="display: none;transition: 1s;">3</p>
+            <p id="4" class="1" style="display: none;transition: 1s;">4</p>
+            <p id="5" class="1" style="display: none;transition: 1s;">5</p>
+            <p id="6" class="1" style="display: none;transition: 1s;">6</p>
+            <p id="7" class="1" style="display: none;transition: 1s;">7</p>
+            <p id="8" class="1" style="display: none;transition: 1s;">8</p>
+
+            <button class="btn" id="next" onclick="next++">Next</button>
+            <button class="btn" id="back" onclick="back--">Back</button>
+        </div>
+        <div class="fotter">
+
+        </div>
+    </div>
+    <script>
+        var next = 0;
+        var back = 0;
+        var page = 0;
+        page = page + (next + back);
+        console.log(page);
+        /*function next() {
+            var zmienna = document.querySelector(.1[style])
+        }
+        function back() {
+
+        }*/
+    </script>
+</body>
+
+</html>

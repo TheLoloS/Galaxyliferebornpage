@@ -1,0 +1,371 @@
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realizator</title>
+    <meta name="author" content="Piotr TheLoloS Sałaga">
+    <meta name="keywords" content="Metal, rock, stydio, wytwórnia, realizacja, realizator, jędrzej, panek">
+    <meta name="description" content="Potrzebujesz dobrych podkładów, lini melodycznych czy też pomocy muzycznej? 
+        Profesjonalny realizator Jedrzej Panek Pomoże ci odnaleść to czego szukasz.">
+    <link rel="icon" href="logo23.png" sizes="any" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital@1&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        .backgroung {
+            width: 100%;
+            height: 100%;
+        }
+
+        .background_img {
+            width: 100%;
+            height: 100%;
+
+        }
+
+        .button_menu {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            cursor: pointer;
+            z-index: 9999;
+
+        }
+
+        .button_menu:hover {
+            transform: scale(1.1);
+            transition: 0.3s;
+        }
+
+        .button_menu_table {
+            background-color: white;
+            width: 40px;
+            height: 5px;
+            margin: 5px;
+        }
+
+        .menu {
+            background-color: black;
+            width: 35%;
+            height: 100%;
+            transition: 0.5s ease-in;
+            position: absolute;
+            left: 0;
+            top: 0;
+            transform: translateX(-35vw);
+            z-index: 999;
+        }
+
+        #menu_toggled {
+            background-color: black;
+            width: 35%;
+            height: 100%;
+            transition: 0.5s ease-in;
+            position: absolute;
+            left: 0;
+            top: 0;
+            transform: translateX(0);
+
+        }
+
+        #table_1 {
+            transition: 0.3s ease-in;
+        }
+
+        #table_2 {
+            transition: 0.3s ease-in;
+        }
+
+        #table_3 {
+            transition: 0.3s ease-in;
+        }
+
+        #table_1_toggled {
+            transform: rotate(45deg) translate(8px, 8px);
+            transition: 0.3s ease-in;
+        }
+
+        #table_2_toggled {
+            opacity: 0;
+            transition: 0.3s ease-in;
+            transform: scale(0);
+        }
+
+        #table_3_toggled {
+            transform: rotate(-45deg) translate(6px, -6px);
+            transition: 0.3s ease-in;
+        }
+
+        .first_contant {
+            left: 30%;
+            right: 15%;
+            width: 55%;
+            height: 70%;
+            top: 15%;
+            position: absolute;
+            background-color: rgba(150, 143, 143, 0.5);
+
+        }
+
+        .first_contant>h1 {
+            color: white;
+            padding-left: 30px;
+            font-size: 64px;
+            transition: 0.3s ease;
+        }
+
+        .first_contant>h1:hover {
+            font-size: 65px;
+            transition: 0.3s ease;
+        }
+
+        .first_contant>p {
+            margin-top: 5% !important;
+            color: white;
+            margin: 8%;
+            font-size: 22px;
+            line-height: 30px;
+            font-family: 'Jost', sans-serif;
+        }
+
+        .fotter {
+            position: fixed;
+            bottom: 0;
+            margin: auto;
+            text-align: center;
+            color: white;
+            font-size: 16px;
+            background: transparent;
+            width: 100%;
+        }
+
+        .transp {
+            width: 0;
+            z-index: 100;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: none;
+            opacity: 0;
+            transition: 1s;
+        }
+
+        .transp_toggled {
+            width: 100%;
+            z-index: 100;
+            height: 100%;
+            background-color: rgba(93, 88, 88, 0.77);
+            ;
+            opacity: 1;
+            transition: 1s;
+            position: absolute;
+
+
+        }
+
+        .menu_content {
+            margin: 0;
+            padding: 0
+        }
+
+        .logo_menu>img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .logo_menu {
+            width: 100px;
+            height: 100px;
+            margin: auto;
+        }
+
+        .btn_menu {
+            width: 100%;
+            height: 150px;
+            border: 0;
+            background-color: #000;
+            color: white;
+            font-size: 24px;
+            transition: 0.3s;
+            outline: 0;
+
+        }
+
+        .btn_menu:hover {
+            background-color: rgb(43, 43, 43);
+            font-size: 30px;
+            transition: 0.3s;
+        }
+
+        .button_menu:focus {
+            outline: 0;
+        }
+    </style>
+    <div class="backgroung">
+        <div class="transp" id="transp">
+        </div>
+        <img class="background_img" src="opass.png" alt="">
+        <div class="menu" id="menu">
+            <ul class="menu_content">
+                <br>
+                <div class="logo_menu">
+                    <img src="logo23.png" alt="">
+                </div>
+                <br><br>
+                <hr>
+                <li>
+                    <button class="btn_menu">O mnie </button>
+                </li>
+                <hr>
+                <li>
+                    <button class="btn_menu">Moja Twórczość</button>
+                </li>
+                <hr>
+                <li>
+                    <button class="btn_menu">Społeczności</button>
+                </li>
+                <hr>
+                <li>
+                    <button class="btn_menu">Kontakt</button>
+                </li>
+                <hr>
+            </ul>
+        </div>
+        <div class="button_menu" id="button_menu">
+            <div class="button_menu_table" id="table_1"></div>
+            <div class="button_menu_table" id="table_2"></div>
+            <div class="button_menu_table" id="table_3"></div>
+        </div>
+        <div class="first_contant">
+            <h1>Realizacja & Studio</h1>
+            <hr style="font-size: 4px;">
+            <p>Witam Nazywam się Jędrzej Panek i od dziecka zajmuje sie muzyką.
+                Prowadze profesjonalne studio oraz realizuje projekty takie jak:
+                <br>
+                -tworzenie liń melodycznych<br>
+                -od podstaw nagrywanie scierzek dzwiekowych<br>
+                -podkładania ich<br>
+                -okrajania utworów<br>
+                -dostosowywanie<br>
+                - i inne chuje muje dzike węże (nwm co tu napisać ty se tekst wymyśl iwesz oco chodzi a ja na
+                technicznym
+                słownictwie sie nie znam)
+            </p>
+        </div>
+        <div class="fotter">
+            <p>Autor: Piotr TheLoloS Sałaga 2020. Wykonał dla Jędrzej Panek. Wszystkie prawa zastrzerzone &copy</p>
+        </div>
+
+    </div>
+    <script>
+        var menu_button = document.querySelector(".button_menu");
+        var button_toggle = document.querySelector(".button_menu_table");
+        var przyciski = document.querySelectorAll(".btn_menu");
+        przyciski[3].addEventListener("click", function przycisk4() {
+            if (button_toggle.getAttribute("id") == "table_1") {
+                document.getElementById("menu").setAttribute("id", "menu_toggled");
+                document.getElementById("transp").setAttribute("class", "transp_toggled");
+
+            } else {
+                document.getElementById("menu_toggled").setAttribute("id", "menu");
+                document.getElementById("transp").setAttribute("class", "transp");
+            }
+            if (button_toggle.getAttribute("id") == "table_1") {
+                document.getElementById("table_1").setAttribute("id", "table_1_toggled");
+                document.getElementById("table_2").setAttribute("id", "table_2_toggled");
+                document.getElementById("table_3").setAttribute("id", "table_3_toggled");
+            } else {
+                document.getElementById("table_1_toggled").setAttribute("id", "table_1");
+                document.getElementById("table_2_toggled").setAttribute("id", "table_2");
+                document.getElementById("table_3_toggled").setAttribute("id", "table_3");
+            }
+        });
+        przyciski[2].addEventListener("click", function przycisk3() {
+            if (button_toggle.getAttribute("id") == "table_1") {
+                document.getElementById("menu").setAttribute("id", "menu_toggled");
+                document.getElementById("transp").setAttribute("class", "transp_toggled");
+
+            } else {
+                document.getElementById("menu_toggled").setAttribute("id", "menu");
+                document.getElementById("transp").setAttribute("class", "transp");
+            }
+            if (button_toggle.getAttribute("id") == "table_1") {
+                document.getElementById("table_1").setAttribute("id", "table_1_toggled");
+                document.getElementById("table_2").setAttribute("id", "table_2_toggled");
+                document.getElementById("table_3").setAttribute("id", "table_3_toggled");
+            } else {
+                document.getElementById("table_1_toggled").setAttribute("id", "table_1");
+                document.getElementById("table_2_toggled").setAttribute("id", "table_2");
+                document.getElementById("table_3_toggled").setAttribute("id", "table_3");
+            }
+        });
+        przyciski[1].addEventListener("click", function przycisk2() {
+            if (button_toggle.getAttribute("id") == "table_1") {
+                document.getElementById("menu").setAttribute("id", "menu_toggled");
+                document.getElementById("transp").setAttribute("class", "transp_toggled");
+
+            } else {
+                document.getElementById("menu_toggled").setAttribute("id", "menu");
+                document.getElementById("transp").setAttribute("class", "transp");
+            }
+            if (button_toggle.getAttribute("id") == "table_1") {
+                document.getElementById("table_1").setAttribute("id", "table_1_toggled");
+                document.getElementById("table_2").setAttribute("id", "table_2_toggled");
+                document.getElementById("table_3").setAttribute("id", "table_3_toggled");
+            } else {
+                document.getElementById("table_1_toggled").setAttribute("id", "table_1");
+                document.getElementById("table_2_toggled").setAttribute("id", "table_2");
+                document.getElementById("table_3_toggled").setAttribute("id", "table_3");
+            }
+        });
+
+        przyciski[0].addEventListener("click", function przycisk1() {
+            if (button_toggle.getAttribute("id") == "table_1") {
+                document.getElementById("menu").setAttribute("id", "menu_toggled");
+                document.getElementById("transp").setAttribute("class", "transp_toggled");
+
+            } else {
+                document.getElementById("menu_toggled").setAttribute("id", "menu");
+                document.getElementById("transp").setAttribute("class", "transp");
+            }
+            if (button_toggle.getAttribute("id") == "table_1") {
+                document.getElementById("table_1").setAttribute("id", "table_1_toggled");
+                document.getElementById("table_2").setAttribute("id", "table_2_toggled");
+                document.getElementById("table_3").setAttribute("id", "table_3_toggled");
+            } else {
+                document.getElementById("table_1_toggled").setAttribute("id", "table_1");
+                document.getElementById("table_2_toggled").setAttribute("id", "table_2");
+                document.getElementById("table_3_toggled").setAttribute("id", "table_3");
+            }
+        });
+
+        menu_button.addEventListener("click", function name() {
+            if (button_toggle.getAttribute("id") == "table_1") {
+                document.getElementById("menu").setAttribute("id", "menu_toggled");
+                document.getElementById("transp").setAttribute("class", "transp_toggled");
+
+            } else {
+                document.getElementById("menu_toggled").setAttribute("id", "menu");
+                document.getElementById("transp").setAttribute("class", "transp");
+            }
+            if (button_toggle.getAttribute("id") == "table_1") {
+                document.getElementById("table_1").setAttribute("id", "table_1_toggled");
+                document.getElementById("table_2").setAttribute("id", "table_2_toggled");
+                document.getElementById("table_3").setAttribute("id", "table_3_toggled");
+            } else {
+                document.getElementById("table_1_toggled").setAttribute("id", "table_1");
+                document.getElementById("table_2_toggled").setAttribute("id", "table_2");
+                document.getElementById("table_3_toggled").setAttribute("id", "table_3");
+            }
+        });
+    </script>
+</body>
+
+</html>
